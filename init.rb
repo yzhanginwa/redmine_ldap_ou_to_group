@@ -2,7 +2,7 @@ require 'redmine'
 
 Redmine::Plugin.register :redmine_ldap_ou_to_group do
   name 'Redmine LDAP Organiztion Unit to Group Plugin'
-  author 'Yi Zhanga'
+  author 'Yi Zhang'
   description 'This is a plugin to help sync ldap ou to redmine group'
   version '0.1'
   requires_redmine :version_or_higher => '2.0.0'
