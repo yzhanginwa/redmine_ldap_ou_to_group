@@ -9,12 +9,13 @@ module LdapOuToGroup
         sync_ou_to_group(user, ous) 
       end
       attrs
+      return result
     end
 
     def parse_ou_from_dn(str)
       # The str looks like the following line
       # CN=zhangyi,OU=研发平台,OU=流程管理,OU=FFFF,OU=研发中心,OU=MMMM,DC=MMMMM,DC=com
-      str.split(/,\s*/).select{|i| i =~ /^OU=.+$/}.map{|s| s[3, s.size]}
+      str.split(/,\s*/).select{|i| i =~ /^OU=.+$/i}.map{|s| s[3, s.size]}
     end
         
     def sync_ou_to_group(user, ous)
