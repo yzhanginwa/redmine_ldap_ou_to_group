@@ -8,8 +8,7 @@ module LdapOuToGroup
         ous = parse_ou_from_dn(attrs[:dn])
         sync_ou_to_group(user, ous) 
       end
-      attrs
-      return result
+      result
     end
 
     def parse_ou_from_dn(str)
